@@ -15,6 +15,8 @@ set path+=**
 set wildmenu
 
 set tabstop=3
+
+set shiftwidth=4
  
 " Tweaks for browsing
 let g:netrw_banner=0        " disable annoying banner
