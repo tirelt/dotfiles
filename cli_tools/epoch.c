@@ -11,4 +11,5 @@ int main( int argc, char *argv[]) {
         strftime(buf, sizeof(buf), "%a %Y-%m-%d %H:%M:%S %Z", ts);
         printf("%ld -> %s\n", epoch_time, buf);
     }
+    return 0;
 }
