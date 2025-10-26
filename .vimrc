@@ -3,6 +3,9 @@ set nocompatible
 
 " Use line numbers
 set nu
+
+" enable mouse support
+set mouse=a
  
 " enable syntax and plugins (for netrw)
 syntax enable
@@ -11,12 +14,17 @@ filetype plugin on
 " Provides tab-completion for all file-related tasks
 set path+=**
  
+" set leader 
+let mapleader=","
+
 " Display all matching files when we tab complete
 set wildmenu
 
 set tabstop=3
 set shiftwidth=4
- 
+set autoindent
+set smartindent
+
 " Tweaks for browsing
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=4  " open in prior window
@@ -31,14 +39,21 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - check |netrw-browse-maps| for more mappings
 
 set scrolloff=8
-set incsearch
 
-" NOW WE CAN:
-" - :edit a folder to open a file browser
-" - <CR>/v/t to open in an h-split/v-split/tab
-" - check {netrw-browse-maps} for more mappings
-set scrolloff=8
-set incsearch
+" Search
+set incsearch " highlight results of search
+set hlsearch " highlight search
+set ignorecase " search case insensitive 
+set smartcase " except if we search uppercase
+" Clear search highlights with <leader>/
+nnoremap <leader>/ :nohlsearch<CR>
+
+" Persistent undo 
+set undofile
+set undodir=~/.vim/undo
+
+" highlight matching parentheses / brackets
+set showmatch
 
 " Move up/down selected text
 vnoremap J :m '>+1<CR>gv=gv

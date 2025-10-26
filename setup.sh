@@ -5,6 +5,7 @@ mkdir -p ~/.ssh
 ln -sf "$(pwd)/.vimrc" ~/.vimrc
 ln -sf "$(pwd)/.bash_profile" ~/.bash_profile
 ln -sf "$(pwd)/.bashrc" ~/.bashrc
+ln -sf "$(pwd)/.tmux.conf" ~/.tmux.conf
 
 CLI_TOOLS_DIR="$HOME/cli_tools"
 mkdir -p "$CLI_TOOLS_DIR" 
