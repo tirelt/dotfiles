@@ -1,8 +1,8 @@
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
-" Use raltive line numbers
-set rnu
+" Use line numbers
+set nu
  
 " enable syntax and plugins (for netrw)
 syntax enable
@@ -15,7 +15,6 @@ set path+=**
 set wildmenu
 
 set tabstop=3
-
 set shiftwidth=4
  
 " Tweaks for browsing
@@ -33,14 +32,33 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 set scrolloff=8
 set incsearch
- 
+
+" NOW WE CAN:
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check {netrw-browse-maps} for more mappings
+set scrolloff=8
+set incsearch
+
+" Move up/down selected text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <C-d> <C-d>zz0
-nnoremap <C-u> <C-u>zz0
+
+" Replace word under cursor in selected text
+vnoremap s :s/\<<C-r><C-w>\>/<C-r><C-w>/g<left><left>
+
+" Reselect text after indenting
+vnoremap < <gv
+vnoremap > >gv
+
+" Center cursor after next/prev search and ctrl+u/d
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
+" Replace word under cursor
+nnoremap s :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<left><left><left>
 
 set background=dark
-colorscheme slate                         
+colorscheme slate
