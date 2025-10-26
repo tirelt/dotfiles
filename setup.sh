@@ -1,8 +1,11 @@
 #!/bin/bash
 
 mkdir -p ~/.ssh
+mkdir -p ~/.config/nvim/lua/plugins
 
 ln -sf "$(pwd)/.vimrc" ~/.vimrc
+ln -sf "$(pwd)/.vimrc" ~/.config/nvim/init.vim
+ln -sf "$(pwd)/init.lua" ~/.config/nvim/lua/plugins/init.lua
 ln -sf "$(pwd)/.bash_profile" ~/.bash_profile
 ln -sf "$(pwd)/.bashrc" ~/.bashrc
 ln -sf "$(pwd)/.tmux.conf" ~/.tmux.conf
