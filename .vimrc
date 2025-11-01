@@ -55,8 +55,10 @@ set undodir=~/.vim/undo
 " highlight matching parentheses / brackets
 set showmatch
 
-" yank to system clipoard with Y
-vnoremap <C-y> "+y
+" yank to system clipoard with Y and keep the cursor at the end of the
+" selection
+xnoremap y ygv<Esc>
+vnoremap <C-y> "+ygv<Esc>
 nnoremap <C-p> "+p
 
 " Move up/down selected text
