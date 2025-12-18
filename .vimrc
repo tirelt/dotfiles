@@ -2,7 +2,7 @@
 set nocompatible
 
 " Use line numbers
-set nu
+set rnu
 
 " enable mouse support
 set mouse=a
