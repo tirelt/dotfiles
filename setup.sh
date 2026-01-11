@@ -18,3 +18,4 @@ gcc ./cli_tools/binary.c -std=c17 -o "$CLI_TOOLS_DIR/binary"
 chmod +x "$CLI_TOOLS_DIR/binary"
 
 source "$HOME/.bash_profile"
+source "$HOME/.bashrc"
