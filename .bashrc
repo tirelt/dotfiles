@@ -1,3 +1,4 @@
 export EDITOR=vim
 alias epoch="$CLI_TOOLS_DIR/epoch"
 alias binary="$CLI_TOOLS_DIR/binary"
+. "$HOME/.cargo/env"
