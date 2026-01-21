@@ -1,5 +1,6 @@
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.ghcup/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export CLI_TOOLS_DIR="$HOME/cli_tools"
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
