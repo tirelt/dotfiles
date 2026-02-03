@@ -83,3 +83,11 @@ nnoremap s :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<left><left><left>
 
 set background=dark
 colorscheme slate
+
+" Autoclosing
+
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
