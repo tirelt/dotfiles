@@ -91,3 +91,6 @@ inoremap [ []<Left>
 inoremap { {}<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
+
+" safer: hit Esc twice to enter Terminal-Normal, avoids many app conflicts
+tnoremap <Esc><Esc> <C-\><C-n>

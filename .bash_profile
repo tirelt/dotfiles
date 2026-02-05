@@ -1,5 +1,5 @@
 [ -d "/opt/homebrew/bin" ] && export PATH="/opt/homebrew/bin:$PATH"
-[ -d "$HOME/.gchup/bin" ] && export PATH="$HOME/.ghcup/bin:$PATH"
+[ -d "$HOME/.ghcup/bin" ] && export PATH="$HOME/.ghcup/bin:$PATH"
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
 export CLI_TOOLS_DIR="$HOME/cli_tools"
